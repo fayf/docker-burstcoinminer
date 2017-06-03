@@ -9,19 +9,19 @@ The image's entrypoint expects to find ```/conf/mining.conf``` and uses that as 
 * Plotfile locations (you can put the plotfiles in a subdirectory under ```conf```, or mount additional volumes and point to them if necessary)
 * Web server address (OPTIONAL - you'll have to set it to the ip address of the host computer AND forward the port to make it accessible)
 
-Example:
-```/homes/andrew/burstcoin/conf``` contains:
+## Example
+If ```/homes/andrew/burstcoin/conf``` on the host machine with IP ```192.168.1.100``` contains:
 ```
 mining.conf (same as sample)
 plots/
   <plotfiles>
 ```
 
-Executing:
+Then, executing:
 ```
-docker run -it --rm -v "/homes/andrew/burstcoin/conf":"/conf" -p 8080:8080 fayf/burstcoinminer:0.0.1
+docker run -it --rm -v "/homes/andrew/burstcoin/conf":"/conf" -p 8080:8080 fayf/burstcoinminer
 ```
-will start the miner using the plot, and make available a webserver at http://192.168.1.100:8080 where you can see the miner at work.
+will start a miner using the plotfiles, and make available a webserver at http://192.168.1.100:8080 where you can see the miner at work.
 
 ## Donations
 Support me
