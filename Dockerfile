@@ -1,5 +1,4 @@
 FROM ubuntu:16.04
-COPY creepMiner /creepMiner
-RUN apt-get update; \
-  apt-get install libssl-dev -y;
+COPY setup.sh /setup.sh
+RUN /setup.sh
 ENTRYPOINT /creepMiner/run.sh /conf/mining.conf
