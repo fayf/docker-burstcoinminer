@@ -14,6 +14,7 @@ git checkout f318a63749ab6cfcf2629ade255b4bdca486a39d
 make
 mkdir /creepMiner
 mv bin/creepMiner ../creepMiner/
+mv bin/public ../creepMiner/public
 
 cd ..
 rm -r creepMiner-src
