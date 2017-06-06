@@ -1,11 +1,12 @@
 apt-get update
 apt-get install -y \
+  build-essential \
   git \
-  sudo \
-  wget \
-  openssl \
   libssl-dev \
-  build-essential
+  openssl \
+  sudo \
+  tzdata \
+  wget
 
 git clone https://github.com/Creepsky/creepMiner.git creepMiner-src
 cd creepMiner-src
