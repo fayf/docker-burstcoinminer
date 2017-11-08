@@ -11,9 +11,9 @@ apt install -y \
 
 git clone https://github.com/Creepsky/creepMiner.git creepMiner-src
 cd creepMiner-src
-git checkout ca5cc1d3877cf6ede004ff42fceeaa8eb7862e4b 
+git checkout 41abf49fd4b248840e7aef9584589f7be53bb34a 
 ./install-poco.sh
-cmake .
+cmake . -DNO_GPU=ON
 make
 mkdir /creepMiner
 mv bin/creepMiner ../creepMiner/
