@@ -24,7 +24,7 @@ docker run -it --rm -v "/homes/andrew/burstcoin/conf":"/conf" -p 8080:8080 fayf/
 will start a miner using the plotfiles, and make available a webserver at `http://192.168.1.100:8080` where you can see the miner at work.
 
 ## Docker tags
-The default image uses AVX2 extensions. If these are not available to you, use the `no-avx` version of the image.
+If your CPU supports AVX2 extensions, use the image tagged `avx`. If these are not available to you, use the `no-avx` version of the image.
 
 ## Donations
 Support me
