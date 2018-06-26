@@ -1,6 +1,8 @@
 FROM ubuntu:16.04
 COPY setup_packages.sh /setup_packages.sh
 RUN /setup_packages.sh
+COPY clone.sh /clone.sh
+RUN /clone.sh
 COPY compile.sh /compile.sh
 RUN /compile.sh
 COPY cleanup.sh /cleanup.sh
